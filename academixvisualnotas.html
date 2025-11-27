@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Academix - Mis Notas</title>
+  <!-- Vincula el CSS externo -->
+  <link rel="stylesheet" href="academixvisualnotas.css" />
+</head>
+<body>
+  <!-- Encabezado -->
+  <div class="header">
+    <div class="header-logo">
+      <!-- Puedes reemplazar la URL por un archivo local (ej: "academixlogo.jpg") -->
+      <img src="academixlogo.jpg" alt="Academix Logo" />
+      
+    </div>
+
+    <div class="user-info">
+      <div class="name">Juan Pérez Gómez</div>
+      <div class="role">Estudiante - Grado 10°</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Información del estudiante -->
+    <div class="student-card">
+      <h2>Información Académica</h2>
+
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="label">Período Académico</div>
+          <div class="value">2025 - Período 3</div>
+        </div>
+
+        <div class="info-item">
+          <div class="label">Curso</div>
+          <div class="value">10° - Grupo A</div>
+        </div>
+
+        <div class="info-item">
+          <div class="label">Última Actualización</div>
+          <div class="value">15 Oct 2025</div>
+        </div>
+
+        <div class="info-item">
+          <div class="label">Estado</div>
+          <div class="value">Activo</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabla de notas -->
+    <div class="grades-section">
+      <h2>Mis Calificaciones</h2>
+
+      <div class="table-container">
+        <table class="grades-table">
+          <thead>
+            <tr>
+              <th>Materia</th>
+              <th>Docente</th>
+              <th>Actividad 1</th>
+              <th>Actividad 2</th>
+              <th>Actividad 3</th>
+              <th>Promedio</th>
+              <th>Fecha</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="subject-name">Matemáticas</td>
+              <td class="teacher-name">Prof. Ana María García</td>
+              <td><span class="grade-badge grade-high">4.5</span></td>
+              <td><span class="grade-badge grade-high">4.8</span></td>
+              <td><span class="grade-badge grade-high">4.2</span></td>
+              <td><span class="grade-badge grade-high">4.5</span></td>
+              <td class="date">12/10/2025</td>
+            </tr>
+
+            <tr>
+              <td class="subject-name">Español</td>
+              <td class="teacher-name">Prof. Carlos Mendoza</td>
+              <td><span class="grade-badge grade-high">4.0</span></td>
+              <td><span class="grade-badge grade-medium">3.8</span></td>
+              <td><span class="grade-badge grade-high">4.3</span></td>
+              <td><span class="grade-badge grade-high">4.0</span></td>
+              <td class="date">13/10/2025</td>
+            </tr>
+
+            <tr>
+              <td class="subject-name">Ciencias Naturales</td>
+              <td class="teacher-name">Prof. Laura Rodríguez</td>
+              <td><span class="grade-badge grade-medium">3.5</span></td>
+              <td><span class="grade-badge grade-medium">3.7</span></td>
+              <td><span class="grade-badge grade-high">4.0</span></td>
+              <td><span class="grade-badge grade-medium">3.7</span></td>
+              <td class="date">14/10/2025</td>
+            </tr>
+
+            <!-- Más filas... -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Promedio general -->
+      <div class="average-card">
+        <div class="label">Promedio General del Período</div>
+        <div class="value">4.2</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

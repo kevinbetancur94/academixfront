@@ -1,0 +1,198 @@
+body{
+    margin:0;
+    font-family: "poppins", sans-serif;
+    background: #1a1a2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    filter: drop-shadow(0 0 15px rgba(0,212,255,0.3));
+ 
+}
+.container{background-color:#16213e;
+backdrop-filter:blur(12px);
+padding: 40px 40px;
+border-radius: 20px;
+box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+width: 350px;
+text-align: center;
+color:white; 
+}
+.logo img{
+    width: 300px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    filter: drop-shadow(0 0 15px rgba(0,212,255,0.3));
+}
+h2{
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #a8e6ff;  
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="password"]
+{
+    width: 300px;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff20;
+    color: white;
+    outline: none;
+    transition: all 0.3s ease;
+}
+.formulario input[type="tel"]{
+    width: 300px;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff20;
+    color: white;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.formulario input::placeholder{
+color:#e0e0e0;
+}
+
+.formulario input:focus{
+    background-color: #ffffff30;
+    box-shadow: 0 0 5px #00afff;
+}
+
+.role-selection {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+    
+}
+
+.role-option {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.role-option:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #00d4ff;
+}
+
+.role-option input[type="radio"] {
+    display: none;
+}
+
+.role-option input[type="radio"]:checked + span {
+    color: #00d4ff;
+    font-weight: 600;
+}
+
+.role-option input[type="radio"]:checked ~ span {
+    color: #00d4ff;
+}
+
+.role-option:has(input[type="radio"]:checked) {
+    background: rgba(0, 212, 255, 0.2);
+    border-color: #00d4ff;
+}
+
+.role-option span {
+    color: #cbd5e0;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+
+button{
+background-color: #00aaff;
+color: white;
+font-size: 16px;
+border: none;
+padding: 10px;
+border-radius: 10px;
+width: 150px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+text-align: center;
+
+
+}
+button:hover{
+    background-color: #008ecc;
+    transform: scale(1.05);
+}
+select{
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff20;
+    color: white;
+    outline: none;
+    transition: all 0.3s ease;
+}
+select:focus{
+    background-color: #ffffff30;
+    box-shadow: 0 0 5px #00afff;
+}
+select option{
+    background-color: #16213e;
+    color: white;
+}
+
+.role-selector {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.role-option {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.role-option:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #e91b00;
+}
+
+.role-option input[type="radio"] {
+    display: none;
+}
+
+.role-option input[type="radio"]:checked + span {
+    color: #0dcf06;
+    font-weight: 600;
+}
+
+.role-option input[type="radio"]:checked ~ span {
+    color: #fffb05;
+}
+
+.role-option:has(input[type="radio"]:checked) {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #faf8f9;
+}
+
+    

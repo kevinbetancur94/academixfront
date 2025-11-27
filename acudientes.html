@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academix - Vista Acudiente Premium</title>
+    <link rel="stylesheet" href="acudientes.css">
+</head>
+<body>
+    <!-- Badge Premium -->
+    <div class="premium-badge">PREMIUM</div>
+
+    <!-- Encabezado -->
+    <div class="header">
+        <div class="header-logo">
+            <img src="academixlogo.jpg" alt="Academix Logo">
+        </div>
+        <div class="user-info">
+            <div class="name">María González López</div>
+            <div class="role">Acudiente Premium</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Selector de hijo -->
+        <div class="child-selector">
+            <h2>Seleccionar Estudiante</h2>
+            <label>Ver notas de:</label>
+            <select>
+                <option value="juan">Juan Pérez González (10° - Grupo A)</option>
+                <option value="sofia">Sofía Pérez González (8° - Grupo B)</option>
+                <option value="carlos">Carlos Pérez González (6° - Grupo A)</option>
+            </select>
+        </div>
+
+        <!-- ALERTAS CRÍTICAS -->
+        <div class="critical-alerts">
+            <div class="alert-header">
+                <div class="alert-icon">⚠️</div>
+                <div class="alert-header-text">
+                    <h3>1 ALERTA CRÍTICA</h3>
+                    <p>Su hijo requiere atención inmediata en las siguientes materias</p>
+                </div>
+            </div>
+            
+            <div class="alert-item">
+                <div>
+                    <div class="alert-subject">Historia</div>
+                    <div class="alert-teacher">Prof. Diana Torres · dtorres@academix.edu</div>
+                </div>
+                <div class="alert-grade">2.8</div>
+            </div>
+        </div>
+
+        <!-- Información Premium -->
+        <div class="info-box premium-info">
+            👑 <strong>Acceso Premium:</strong> Contacto directo con docentes, notificaciones en tiempo real y reportes detallados disponibles.
+        </div>
+
+        <!-- Resumen del estudiante -->
+        <div class="student-summary">
+            <div class="summary-header">
+                <h2>Resumen Académico - Juan Pérez González</h2>
+                <div class="average-badge">Promedio: 4.2</div>
+            </div>
+            
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <div class="label">Período Académico</div>
+                    <div class="value">2025 - Período 3</div>
+                </div>
+                <div class="summary-item">
+                    <div class="label">Materias Aprobadas</div>
+                    <div class="value">5 de 6</div>
+                </div>
+                <div class="summary-item">
+                    <div class="label">Materias en Riesgo</div>
+                    <div class="value">1 materia</div>
+                </div>
+                <div class="summary-item">
+                    <div class="label">Tendencia General</div>
+                    <div class="value">
+                        <span class="trend-icon">⬆️</span>
+                        Mejorando
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Información -->
+        <div class="info-box">
+            ℹ️ Última actualización: 15 de Octubre, 2025. Las notas se actualizan automáticamente cuando los docentes registran nuevas calificaciones.
+        </div>
+
+        <!-- Tabla de calificaciones -->
+        <div class="grades-section">
+            <div class="header-with-button">
+            <h2>Calificaciones Detalladas</h2> 
+            <button onclick="window.print()">Descargar En PDF</button>
+            </div>
+            <div class="table-container">
+                <table class="grades-table">
+                    <thead>
+                        <tr>
+                            <th>Materia y Docente</th>
+                            <th>Actividad 1</th>
+                            <th>Actividad 2</th>
+                            <th>Actividad 3</th>
+                            <th>Promedio</th>
+                            <th>Tendencia</th>
+                            <th>Observaciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Filas con materias -->
+                        <tr>
+                            <td>
+                                <div class="subject-name">Matemáticas</div>
+                                <div class="teacher-name">Prof. Ana María García</div>
+                                <a href="mailto:agarcia@academix.edu" class="teacher-contact">👑 📧 Contactar</a>
+                            </td>
+                            <td><span class="grade-badge grade-high">4.5</span></td>
+                            <td><span class="grade-badge grade-high">4.8</span></td>
+                            <td><span class="grade-badge grade-high">4.2</span></td>
+                            <td><span class="grade-badge grade-high">4.5</span></td>
+                            <td class="trend-cell">⬆️<span class="trend-comparison">Anterior: 4.2</span></td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="subject-name">Español</div>
+                                <div class="teacher-name">Prof. Carlos Mendoza</div>
+                                <a href="mailto:cmendoza@academix.edu" class="teacher-contact">👑 📧 Contactar</a>
+                            </td>
+                            <td><span class="grade-badge grade-high">4.0</span></td>
+                            <td><span class="grade-badge grade-medium">3.8</span></td>
+                            <td><span class="grade-badge grade-high">4.3</span></td>
+                            <td><span class="grade-badge grade-high">4.0</span></td>
+                            <td class="trend-cell">⬆️<span class="trend-comparison">Anterior: 3.7</span></td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="subject-name">Ciencias Naturales</div>
+                                <div class="teacher-name">Prof. Laura Rodríguez</div>
+                                <a href="mailto:lrodriguez@academix.edu" class="teacher-contact">👑 📧 Contactar</a>
+                            </td>
+                            <td><span class="grade-badge grade-medium">3.5</span></td>
+                            <td><span class="grade-badge grade-medium">3.7</span></td>
+                            <td><span class="grade-badge grade-high">4.0</span></td>
+                            <td><span class="grade-badge grade-medium">3.7</span></td>
+                            <td class="trend-cell">⬆️<span class="trend-comparison">Anterior: 3.3</span></td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="subject-name">Inglés</div>
+                                <div class="teacher-name">Prof. Michael Johnson</div>
+                                <a href="mailto:mjohnson@academix.edu" class="teacher-contact">👑 📧 Contactar</a>
+                            </td>
+                            <td><span class="grade-badge grade-high">4.7</span></td>
+                            <td><span class="grade-badge grade-high">4.9</span></td>
+                            <td><span class="grade-badge grade-high">5.0</span></td>
+                            <td><span class="grade-badge grade-high">4.9</span></td>
+                            <td class="trend-cell">➡️<span class="trend-comparison">Anterior: 4.9</span></td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="subject-name">Educación Física</div>
+                                <div class="teacher-name">Prof. Roberto Sánchez</div>
+                                <a href="mailto:rsanchez@academix.edu" class="teacher-contact">👑 📧 Contactar</a>
+                            </td>
+                            <td><span class="grade-badge grade-high">4.5</span></td>
+                            <td><span class="grade-badge grade-high">4.6</span></td>
+                            <td><span class="grade-badge grade-high">4.8</span></td>
+                            <td><span class="grade-badge grade-high">4.6</span></td>
+                            <td class="trend-cell">⬆️<span class="trend-comparison">Anterior: 4.3</span></td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr style="background: rgba(239, 68, 68, 0.05);">
+                            <td>
+                                <div class="subject-name">Historia</div>
+                                <div class="teacher-name">Prof. Diana Torres</div>
+                                <a href="mailto:dtorres@academix.edu" class="teacher-contact">👑 📧 Contactar</a>
+                            </td>
+                            <td><span class="grade-badge grade-low">2.8</span></td>
+                            <td><span class="grade-badge grade-medium">3.2</span></td>
+                            <td><span class="grade-badge grade-medium">3.5</span></td>
+                            <td><span class="grade-badge grade-medium">3.2</span></td>
+                            <td class="trend-cell">⬆️<span class="trend-comparison">Anterior: 2.9</span></td>
+                            <td>
+                                <div class="observation-trigger">
+                                    <span class="warning-icon">⚠️</span>
+                                    <div class="observation-tooltip">
+                                        <div class="tooltip-title">Comentario del Docente:</div>
+                                        "Juan debe mejorar su asistencia a clase y la entrega puntual de tareas. Se recomienda refuerzo en los temas de Revolución Industrial. Ha mostrado mejora pero necesita más dedicación."
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,547 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #fff;
+}
+
+/* Badge Premium */
+.premium-badge {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    color: #1a1a2e;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.premium-badge::before {
+    content: '👑';
+    font-size: 18px;
+}
+
+/* Encabezado */
+.header {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-logo img {
+    height: 80px;
+}
+
+.user-info {
+    text-align: right;
+}
+
+.user-info .name {
+    color: #00d4ff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.user-info .role {
+    color: #a0aec0;
+    font-size: 14px;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Selector de hijo */
+.child-selector {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.child-selector h2 {
+    color: #00d4ff;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.child-selector label {
+    display: block;
+    color: #e2e8f0;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.child-selector select {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.child-selector select:focus {
+    outline: none;
+    border-color: #00d4ff;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.child-selector option {
+    background: #1a1a2e;
+    color: #fff;
+}
+
+/* ALERTAS CRÍTICAS */
+.critical-alerts {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(220, 38, 38, 0.15) 100%);
+    border: 3px solid rgba(239, 68, 68, 0.5);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    animation: pulse-alert 2s ease-in-out infinite;
+}
+
+@keyframes pulse-alert {
+    0%, 100% { 
+        box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+    }
+    50% { 
+        box-shadow: 0 0 30px rgba(239, 68, 68, 0.6);
+    }
+}
+
+.alert-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.alert-icon {
+    font-size: 48px;
+    animation: shake 0.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+}
+
+.alert-header-text h3 {
+    color: #fca5a5;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.alert-header-text p {
+    color: #fcd34d;
+    font-size: 14px;
+}
+
+.alert-item {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid #ef4444;
+}
+
+.alert-item:last-child {
+    margin-bottom: 0;
+}
+
+.alert-subject {
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.alert-teacher {
+    color: #cbd5e0;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.alert-grade {
+    color: #fca5a5;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+/* Tarjeta de resumen del estudiante */
+.student-summary {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.summary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.summary-header h2 {
+    color: #00d4ff;
+    font-size: 20px;
+}
+
+.average-badge {
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.summary-item {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.summary-item .label {
+    color: #a0aec0;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.summary-item .value {
+    color: #e2e8f0;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.trend-icon {
+    font-size: 24px;
+}
+
+/* Sección de información */
+.info-box {
+    background: rgba(0, 212, 255, 0.1);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: #cbd5e0;
+    font-size: 14px;
+}
+
+.premium-info {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 237, 78, 0.05) 100%);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    color: #ffd700;
+}
+
+/* Tabla de calificaciones */
+.grades-section {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.grades-section h2 {
+    color: #00d4ff;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.grades-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.grades-table thead {
+    background: rgba(0, 212, 255, 0.1);
+}
+
+.grades-table th {
+    padding: 15px;
+    text-align: left;
+    color: #00d4ff;
+    font-weight: 600;
+    font-size: 14px;
+    border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+}
+
+.grades-table td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #e2e8f0;
+}
+
+.grades-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.subject-name {
+    font-weight: 600;
+    color: #fff;
+}
+
+.teacher-name {
+    color: #a0aec0;
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+.teacher-contact {
+    color: #ffd700;
+    font-size: 12px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 3px;
+    transition: color 0.3s ease;
+}
+
+.teacher-contact:hover {
+    color: #ffed4e;
+}
+
+.grade-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    min-width: 50px;
+    text-align: center;
+}
+
+.grade-high {
+    background: rgba(16, 185, 129, 0.2);
+    color: #6ee7b7;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.grade-medium {
+    background: rgba(251, 191, 36, 0.2);
+    color: #fcd34d;
+    border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.grade-low {
+    background: rgba(239, 68, 68, 0.2);
+    color: #fca5a5;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.trend-cell {
+    font-size: 18px;
+    text-align: center;
+}
+
+.trend-comparison {
+    font-size: 12px;
+    color: #a0aec0;
+    display: block;
+    margin-top: 3px;
+}
+
+/* Tooltip de observaciones */
+.observation-trigger {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: help;
+}
+
+.warning-icon {
+    font-size: 24px;
+    animation: pulse-warning 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-warning {
+    0%, 100% { 
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% { 
+        opacity: 0.7;
+        transform: scale(1.1);
+    }
+}
+
+.observation-tooltip {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+    background: rgba(239, 68, 68, 0.95);
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    width: 280px;
+    font-size: 13px;
+    line-height: 1.5;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.observation-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 8px solid transparent;
+    border-top-color: rgba(239, 68, 68, 0.95);
+}
+
+.observation-trigger:hover .observation-tooltip {
+    visibility: visible;
+    opacity: 1;
+    margin-bottom: 15px;
+}
+
+.tooltip-title {
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .premium-badge {
+        top: 10px;
+        right: 10px;
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding-top: 60px;
+    }
+
+    .user-info {
+        text-align: center;
+    }
+
+    .summary-header {
+        flex-direction: column;
+    }
+
+    .alert-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .alert-icon {
+        font-size: 36px;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    .grades-table {
+        font-size: 13px;
+    }
+
+    .grades-table th,
+    .grades-table td {
+        padding: 10px;
+    }
+
+    .observation-tooltip {
+        width: 220px;
+    }
+}
+
+.header-with-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  
+  
+}
+
+.header-with-button h2 {
+  margin: 0;
+ 
+  
+}
+
+.header-with-button button {
+  padding: 12px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #00d4ff;
+  border-radius: 999px;
+}
+
+button:hover {   
+  background-color: #2980b9;
+
+}

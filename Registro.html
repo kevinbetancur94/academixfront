@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.0.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="academixlogo.jpg" alt="Logo de Academix">
+    </div>
+   <h2>Registro de Usuario</h2>
+   
+<form class="formulario">
+  <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo" required>
+   <input type="email" id="correo" name="correo" placeholder="Correo Electronico" required>
+    <input type="tel" id="telefono" name="telefono" placeholder="Telefono" required>
+     <input type="password" id="password" name="password" placeholder="Contraseña" required>
+      <input type="password" id="confirmar" name="confirmar" placeholder="Confirmar Contraseña" required>
+           
+ <div class="form-group">
+                <label>Selecciona tu Rol:</label>
+                <div class="role-selector">
+                    <label class="role-option">
+                        <input type="radio" name="rol" value="estudiante" checked>
+                        <span>Estudiante</span>
+                    </label>
+                    <label class="role-option">
+                        <input type="radio" name="rol" value="docente">
+                        <span>Docente</span>
+                    </label>
+                    <label class="role-option">
+                        <input type="radio" name="rol" value="acudiente">
+                        <span>Acudiente</span>
+                    </label>
+                </div>
+            </div>
+            
+     <label for="ciudad">Departamento</label>
+    <select id="ciudad">
+      <option value="">Seleccione Departamento</option>
+      <option value="Antioquia">Antioquia</option>
+      <option value="Cundinamarca">Cundinamarca</option>
+      <option value="Valle del Cauca">Valle del Cauca</option>
+      <option value="Santander">Santander</option>
+      <option value="Bolivar">Bolivar</option>
+      
+      
+      </select>
+      <label for="Municipio">Ciudad</label>
+    <select id="municipio">
+      <option value="">Seleccione Ciudad</option>
+      <option value="Medellin">Medellin</option>
+      <option value="Bogota">Bogota</option>
+      <option value="Cali">Cali</option>
+      <option value="Bucaramanga">Bucaramanga</option>
+      <option value="Cartagena">Cartagena</option>
+      </select>
+
+       <button type="submit">Registrarse</button>
+  </form>
+ </div>
+</body>
+</html>

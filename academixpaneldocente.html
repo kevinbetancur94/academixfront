@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academix - Panel Docente</title>
+    <link rel="stylesheet" href="academixpaneldocente.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <div class="header">
+        <div class="header-logo">
+            <img src="academixlogo.jpg" alt="Academix Logo">
+        </div>
+        <div class="user-info">
+            <div class="name">Prof. Ana María García</div>
+            <div class="role">Docente</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Selector de materia -->
+        <div class="subject-selector">
+            <h2>Seleccionar Materia</h2>
+            <label>Mis Materias Asignadas:</label>
+            <select>
+                <option value="">-- Selecciona una materia --</option>
+                <option value="matematicas" selected>Matemáticas - 10° Grupo A</option>
+                <option value="matematicas-b">Matemáticas - 10° Grupo B</option>
+                <option value="matematicas-11">Matemáticas - 11° Grupo A</option>
+            </select>
+        </div>
+
+        <!-- Tabla de estudiantes -->
+        <div class="students-section">
+            <h2>Registro de Calificaciones - Matemáticas 10°A</h2>
+            
+            <div class="info-box">
+                ℹ️ Ingresa las calificaciones de cada actividad. El promedio se calcula automáticamente. Puedes agregar observaciones para cada estudiante.
+            </div>
+
+            <div class="table-container">
+                <table class="students-table">
+                    <thead>
+                        <tr>
+                            <th>Estudiante</th>
+                            <th>Actividad 1</th>
+                            <th>Actividad 2</th>
+                            <th>Actividad 3</th>
+                            <th>Promedio</th>
+                            <th>Observaciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Juan Pérez Gómez</strong></td>
+                            <td><input type="number" class="grade-input" min="0" max="5" step="0.1" value="4.5"></td>
+                            <td><input type="number" class="grade-input" min="0" max="5" step="0.1" value="4.8"></td>
+                            <td><input type="number" class="grade-input" min="0" max="5" step="0.1" value="4.2"></td>
+                            <td><span class="average-display average-high">4.5</span></td>
+                            <td>
+                                <textarea class="observation-input" placeholder="Agregar observación...">Excelente desempeño en álgebra</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>María López Torres</strong></td>
+                            <td><input type="number" class="grade-input" min="0" max="5" step="0.1" value="5.0"></td>
+                            <td><input type="number" class="grade-input" min="0" max="5" step="0.1" value="4.9"></td>
+                            <td><input type="number" class="grade-input" min="0" max="5" step="0.1" value="5.0"></td>
+                            <td><span class="average-display average-high">5.0</span></td>
+                            <td>
+                                <textarea class="observation-input" placeholder="Agregar observación...">Sobresaliente participación</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Carlos Ramírez Silva</strong></td>
+                            <td><input type="number" class="grade-input" value="3.5"></td>
+                            <td><input type="number" class="grade-input" value="3.8"></td>
+                            <td><input type="number" class="grade-input" value="3.6"></td>
+                            <td><span class="average-display average-medium">3.6</span></td>
+                            <td>
+                                <textarea class="observation-input">Requiere refuerzo en geometría</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Laura Martínez Ruiz</strong></td>
+                            <td><input type="number" class="grade-input" value="4.3"></td>
+                            <td><input type="number" class="grade-input" value="4.5"></td>
+                            <td><input type="number" class="grade-input" value="4.7"></td>
+                            <td><span class="average-display average-high">4.5</span></td>
+                            <td><textarea class="observation-input"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pedro González Ávila</strong></td>
+                            <td><input type="number" class="grade-input" value="2.8"></td>
+                            <td><input type="number" class="grade-input" value="3.0"></td>
+                            <td><input type="number" class="grade-input" value="2.9"></td>
+                            <td><span class="average-display average-low">2.9</span></td>
+                            <td><textarea class="observation-input">Debe mejorar asistencia y entrega de tareas</textarea></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sofía Hernández Cruz</strong></td>
+                            <td><input type="number" class="grade-input" value="4.0"></td>
+                            <td><input type="number" class="grade-input" value="4.2"></td>
+                            <td><input type="number" class="grade-input" value="4.1"></td>
+                            <td><span class="average-display average-high">4.1</span></td>
+                            <td><textarea class="observation-input"></textarea></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Botón guardar todo -->
+        <div class="save-all-section">
+            <button class="btn-save-all">💾 Guardar Todas las Calificaciones</button>
+        </div>
+    </div>
+</body>
+</html>

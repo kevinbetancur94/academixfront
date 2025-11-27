@@ -1,0 +1,181 @@
+/* Reset simple */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo y tipografía */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #fff;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Encabezado simple */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.05);
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-logo img {
+  height: 80px;
+}
+
+.header-logo h1 {
+  color: #00d4ff;
+  font-size: 20px;
+}
+
+/* Información del usuario */
+.user-info .name {
+  color: #00d4ff;
+  font-weight: 600;
+}
+
+.user-info .role {
+  color: #a0aec0;
+  font-size: 13px;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Tarjeta de información */
+.student-card,
+.grades-section {
+  background: rgba(255,255,255,0.05);
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.student-card h2,
+.grades-section h2 {
+  color: #00d4ff;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+/* Grid sencillo para datos */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.info-item {
+  background: rgba(255,255,255,0.03);
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.info-item .label {
+  color: #a0aec0;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.info-item .value {
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+/* Tabla básica */
+.table-container {
+  overflow-x: auto; /* permite scroll horizontal en pantallas pequeñas */
+}
+
+.grades-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255,255,255,0.02);
+}
+
+.grades-table thead th {
+  text-align: left;
+  padding: 10px;
+  color: #00d4ff;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.grades-table td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  color: #e2e8f0;
+}
+
+/* Badges de nota (colores simples) */
+.grade-badge {
+  display: inline-block;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  min-width: 40px;
+  text-align: center;
+}
+
+.grade-high {
+  background: rgba(16,185,129,0.12);
+  color: #6ee7b7;
+  border: 1px solid rgba(16,185,129,0.2);
+}
+
+.grade-medium {
+  background: rgba(251,191,36,0.12);
+  color: #fcd34d;
+  border: 1px solid rgba(251,191,36,0.2);
+}
+
+.grade-low {
+  background: rgba(239,68,68,0.12);
+  color: #fca5a5;
+  border: 1px solid rgba(239,68,68,0.2);
+}
+
+/* Tarjeta de promedio */
+.average-card {
+  margin-top: 16px;
+  padding: 12px;
+  background: rgba(0,212,255,0.08);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.average-card .value {
+  color: #00d4ff;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+/* Responsive básico */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .header-logo h1 {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academix - Calendario Escolar</title>
+    <link rel="stylesheet" href="academixcalendario.css">
+ 
+</head>
+<body>
+    <header>
+        <div class="header-content">
+              <div class="header-logo">
+            <img src="academixlogo.jpg" alt="Academix Logo">
+        </div>
+        <div class="auth-buttons" id="authButtons">
+                <button class="btn btn-primary" id="btnStudent">Ingreso Estudiante</button>
+                <button class="btn btn-secondary" id="btnTeacher">Ingreso Profesor</button>
+            </div>
+            <div class="user-info" id="userInfo" style="display: none;">
+                <span class="user-badge" id="userBadge"></span>
+                <button class="logout-btn" id="btnLogout">Cerrar Sesión</button>
+            </div>
+    </header>
+
+    <div class="container">
+        <div class="welcome-section" id="welcomeSection">
+            <h1>¡Hola! Bienvenidos a tu Calendario Escolar </h1>
+            <p>Ingresa tu documento de identificación y selecciona tu grado, luego dale <strong style="color: #00d4ff;">Ingresar</strong></p>
+            <div class="cards-container">
+                <div class="info-card">
+                    <div class="icon">👨‍🎓</div>
+                    <h3>Estudiantes</h3>
+                    <p>Consulta tus tareas y fechas de entrega organizadas por materia</p>
+                </div>
+                <div class="info-card">
+                    <div class="icon">👩‍🏫</div>
+                    <h3>Profesores</h3>
+                    <p>Gestiona y programa las actividades escolares</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard" id="dashboard">
+            <div class="calendar-container">
+                <div class="top-section">
+                    <div class="sidebar">
+                        <div class="filter-section">
+                            <h3>📚 Filtrar por Materia</h3>
+                            <div id="subjectFilters"></div>
+                        </div>
+                        <div class="filter-section">
+                            <h3>🎯 Filtrar por Tipo</h3>
+                            <div id="typeFilters"></div>
+                        </div>
+                        <div class="filter-section" id="gradeFilterSection" style="display: none;">
+                            <h3>👥 Filtrar por Grado</h3>
+                            <div id="gradeFilters"></div>
+                        </div>
+                        <div class="filter-section">
+                            <h3>🇨🇴 Festivos Colombia 2025</h3>
+                            <div id="holidaysList"></div>
+                        </div>
+                    </div>
+
+                    <div class="calendar-main">
+                        <div class="calendar-header">
+                            <div class="calendar-month" id="currentMonth"></div>
+                            <div class="calendar-nav">
+                                <button class="nav-btn" id="btnPrevMonth">← Anterior</button>
+                                <button class="nav-btn" id="btnNextMonth">Siguiente →</button>
+                            </div>
+                        </div>
+                        <div class="calendar-grid">
+                            <div class="calendar-day-header">Dom</div>
+                            <div class="calendar-day-header">Lun</div>
+                            <div class="calendar-day-header">Mar</div>
+                            <div class="calendar-day-header">Mié</div>
+                            <div class="calendar-day-header">Jue</div>
+                            <div class="calendar-day-header">Vie</div>
+                            <div class="calendar-day-header">Sáb</div>
+                        </div>
+                        <div class="calendar-grid" id="calendarDays" style="margin-top: -6px;"></div>
+                    </div>
+                </div>
+
+                <div class="tasks-section-full">
+                    <h3>📝 Tareas Próximas</h3>
+                    <div class="tasks-list" id="tasksList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Estudiante -->
+    <div class="modal" id="studentModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeStudent">&times;</span>
+            <div class="modal-header">Ingreso Estudiante</div>
+            <div class="form-group">
+                <label>Documento de Identidad</label>
+                <input type="text" id="studentId" placeholder="Ej: 123456789">
+            </div>
+            <div class="form-group">
+                <label>Contraseña</label>
+                <input type="password" id="studentPassword" placeholder="Ingresa tu contraseña">
+            </div>
+            <div class="form-group">
+                <label>Grado</label>
+                <select id="studentGrade">
+                    <option value="">Selecciona tu grado</option>
+                    <option value="6">6° Grado</option>
+                    <option value="7">7° Grado</option>
+                    <option value="8">8° Grado</option>
+                    <option value="9">9° Grado</option>
+                    <option value="10">10° Grado</option>
+                    <option value="11">11° Grado</option>
+                </select>
+            </div>
+            <button class="btn btn-primary" id="btnLoginStudent" style="width: 100%; margin-top: 10px;">Ingresar</button>
+        </div>
+    </div>
+
+    <!-- Modal Profesor -->
+    <div class="modal" id="teacherModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeTeacher">&times;</span>
+            <div class="modal-header">Ingreso Profesor</div>
+            <div class="form-group">
+                <label>Documento de Identidad</label>
+                <input type="text" id="teacherId" placeholder="Ej: 987654321">
+            </div>
+            <div class="form-group">
+                <label>Contraseña</label>
+                <input type="password" id="teacherPassword" placeholder="Ingresa tu contraseña">
+            </div>
+            <button class="btn btn-primary" id="btnLoginTeacher" style="width: 100%; margin-top: 10px;">Ingresar</button>
+        </div>
+    </div>
+
+    <!-- Modal Agregar Tarea -->
+    <div class="modal" id="addTaskModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeAddTask">&times;</span>
+            <div class="modal-header">Agregar Nueva Tarea</div>
+            <div class="form-group">
+                <label>Título de la Tarea</label>
+                <input type="text" id="taskTitle" placeholder="Ej: Ensayo sobre la Revolución">
+            </div>
+            <div class="form-group">
+                <label>Descripción</label>
+                <textarea id="taskDescription" placeholder="Detalles de la tarea..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Materia</label>
+                <select id="taskSubject">
+                    <option value="">Selecciona una materia</option>
+                    <option value="Matemáticas">Matemáticas</option>
+                    <option value="Ciencias">Ciencias</option>
+                    <option value="Historia">Historia</option>
+                    <option value="Literatura">Literatura</option>
+                    <option value="Inglés">Inglés</option>
+                    <option value="Física">Física</option>
+                    <option value="Química">Química</option>
+                    <option value="Arte">Arte</option>
+                    <option value="Educación Física">Educación Física</option>
+                    <option value="Tecnología">Tecnología</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Tipo de Actividad</label>
+                <select id="taskType">
+                    <option value="">Selecciona el tipo</option>
+                    <option value="Tarea">Tarea</option>
+                    <option value="Proyecto">Proyecto</option>
+                    <option value="Examen">Examen</option>
+                    <option value="Presentación">Presentación</option>
+                    <option value="Investigación">Investigación</option>
+                    <option value="Exposición">Exposición</option>
+                    <option value="Laboratorio">Laboratorio</option>
+                    <option value="Quiz">Quiz</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Grado</label>
+                <select id="taskGrade">
+                    <option value="">Selecciona el grado</option>
+                    <option value="6">6° Grado</option>
+                    <option value="7">7° Grado</option>
+                    <option value="8">8° Grado</option>
+                    <option value="9">9° Grado</option>
+                    <option value="10">10° Grado</option>
+                    <option value="11">11° Grado</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Fecha de Entrega</label>
+                <input type="date" id="taskDate">
+            </div>
+            <div class="form-group">
+                <label>Observaciones (Opcional)</label>
+                <textarea id="taskObservations" placeholder="Observaciones importantes..."></textarea>
+            </div>
+            <button class="btn btn-primary" id="btnAddTask" style="width: 100%; margin-top: 10px;">Agregar Tarea</button>
+        </div>
+    </div>
+
+    <button class="add-task-btn" id="addTaskBtn" style="display: none;">+</button>
+
+    <!-- Modal de Alerta -->
+    <div class="alert-modal" id="alertModal">
+        <div class="alert-content">
+            <div class="alert-icon" id="alertIcon">⚠️</div>
+            <div class="alert-message" id="alertMessage"></div>
+            <button class="alert-btn" id="alertBtn">Entendido</button>
+        </div>
+    </div>
+</body>
+</html>

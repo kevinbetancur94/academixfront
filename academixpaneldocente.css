@@ -1,0 +1,245 @@
+/* ======== Estilos generales ======== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #fff;
+}
+
+/* ======== Encabezado ======== */
+.header {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-logo img {
+    height: 50px;
+}
+
+.header-logo h1 {
+    color: #00d4ff;
+    font-size: 24px;
+}
+
+.user-info {
+    text-align: right;
+}
+
+.user-info .name {
+    color: #00d4ff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.user-info .role {
+    color: #a0aec0;
+    font-size: 14px;
+}
+
+/* ======== Contenedor principal ======== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ======== Selector de materia ======== */
+.subject-selector,
+.students-section,
+.save-all-section {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 25px;
+}
+
+.subject-selector h2,
+.students-section h2 {
+    color: #00d4ff;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.subject-selector label {
+    display: block;
+    color: #e2e8f0;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.subject-selector select {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #00d4ff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.subject-selector select:hover {
+    border-color: #00d4ff;
+}
+
+/* ======== Tabla de estudiantes ======== */
+.students-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.students-table thead {
+    background: rgba(0, 212, 255, 0.1);
+}
+
+.students-table th,
+.students-table td {
+    padding: 15px;
+    text-align: left;
+}
+
+.students-table th {
+    color: #00d4ff;
+    font-weight: 600;
+    font-size: 14px;
+    border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+}
+
+.students-table td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #e2e8f0;
+}
+
+.students-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* ======== Inputs y observaciones ======== */
+.grade-input,
+.observation-input {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.grade-input {
+    width: 70px;
+    padding: 8px;
+    text-align: center;
+}
+
+.grade-input:focus,
+.observation-input:focus {
+    outline: none;
+    border-color: #00d4ff;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.observation-input {
+    width: 100%;
+    padding: 8px;
+    resize: vertical;
+    min-height: 40px;
+}
+
+/* ======== Promedio ======== */
+.average-display {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-align: center;
+    min-width: 50px;
+}
+
+.average-high {
+    background: rgba(16, 185, 129, 0.2);
+    color: #6ee7b7;
+}
+
+.average-medium {
+    background: rgba(251, 191, 36, 0.2);
+    color: #fcd34d;
+}
+
+.average-low {
+    background: rgba(239, 68, 68, 0.2);
+    color: #fca5a5;
+}
+
+/* ======== Botón principal ======== */
+.btn-save-all {
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-save-all:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4);
+}
+
+/* ======== Responsive ======== */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .user-info {
+        text-align: center;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    .students-table {
+        font-size: 13px;
+    }
+
+    .grade-input {
+        width: 60px;
+    }
+
+    .subject-selector select option {
+        background-color: #16213e;
+        color: #fff;
+    }
+}
